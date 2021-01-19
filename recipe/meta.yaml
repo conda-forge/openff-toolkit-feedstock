@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.9.0rc1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-  sha256: 38eeab18f5e2c0eeeb06d96ef93397070319a7e55fc9ea61d806f45c43f82cdb
+  sha256: 2c94b79417d1217b15b68f40c09278d7c9e428e5527f928c8c29651ee07fbbb5
 
 build:
   noarch: python
