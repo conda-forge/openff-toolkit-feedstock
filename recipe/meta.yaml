@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-  sha256: 2c94b79417d1217b15b68f40c09278d7c9e428e5527f928c8c29651ee07fbbb5
+  sha256: dc02048b46eb83abb7b1300cd979bc8ca52c8ad23c6f7de64a7af6d8135fe0da
 
 build:
   number: 1
