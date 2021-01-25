@@ -10,31 +10,46 @@ source:
   sha256: 2c94b79417d1217b15b68f40c09278d7c9e428e5527f928c8c29651ee07fbbb5
 
 build:
-  noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 1
 
-requirements:
-  host:
-    - python
-    - pip
-  run:
-    - python >=3.6
-    - numpy
-    - smirnoff99frosst
-    - openff-forcefields
-    - openmm
-    - networkx
-    - rdkit
-    - ambertools >=20
-    - mdtraj
-    - xmltodict
-  run_constrained:
-    - openforcefield ==9999999999
+outputs:
+  - name: openff-toolkit-base
+    script: build_base.sh
+    build:
+      noarch: python
 
-test:
-  imports:
-    - openff.toolkit
+    requirements:
+      host:
+        - python >= 3.6
+        - pip
+      run:
+        - python >=3.6
+        - numpy
+        - smirnoff99frosst
+        - openff-forcefields
+        - openmm
+        - networkx
+        - mdtraj
+        - xmltodict
+      run_constrained:
+        - openforcefield ==9999999999
+
+    test:
+      imports:
+        - openff.toolkit
+
+  - name: openff-toolkit
+    build:
+      noarch: python
+
+    requirements:
+      - rdkit
+      - ambertools >=20
+      - {{ pin_subpackage('openff-toolkit-base', max_pin="x.x.x") }}
+
+    test:
+      imports:
+        - openff.toolkit
 
 about:
   home: https://openforcefield.org/
