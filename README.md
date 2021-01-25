@@ -37,6 +37,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-openff--toolkit-green.svg)](https://anaconda.org/conda-forge/openff-toolkit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openff-toolkit.svg)](https://anaconda.org/conda-forge/openff-toolkit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openff-toolkit.svg)](https://anaconda.org/conda-forge/openff-toolkit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openff-toolkit.svg)](https://anaconda.org/conda-forge/openff-toolkit) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-openff--toolkit--base-green.svg)](https://anaconda.org/conda-forge/openff-toolkit-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openff-toolkit-base.svg)](https://anaconda.org/conda-forge/openff-toolkit-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openff-toolkit-base.svg)](https://anaconda.org/conda-forge/openff-toolkit-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openff-toolkit-base.svg)](https://anaconda.org/conda-forge/openff-toolkit-base) |
 
 Installing openff-toolkit
 =========================
@@ -47,10 +48,10 @@ Installing `openff-toolkit` from the `conda-forge` channel can be achieved by ad
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `openff-toolkit` can be installed with:
+Once the `conda-forge` channel has been enabled, `openff-toolkit, openff-toolkit-base` can be installed with:
 
 ```
-conda install openff-toolkit
+conda install openff-toolkit openff-toolkit-base
 ```
 
 It is possible to list all of the versions of `openff-toolkit` available on your platform with:
