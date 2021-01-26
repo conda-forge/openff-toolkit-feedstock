@@ -53,7 +53,7 @@ outputs:
         - openff.toolkit
         - rdkit
       commands:
-        - python run_test.py
+        - python test_openff_toolkit_base.py
 
 about:
   home: https://openforcefield.org/
