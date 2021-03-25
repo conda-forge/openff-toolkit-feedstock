@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 0065e400dada50114b6f48e9d68f0c2333af7f81bed97ea095c46494083a5393
+    sha256: 17e6d7f5f1673fa5ebabce74c07c5017fa132dba2bebf17fde314fb1de00d167
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: openff-toolkit-base
@@ -25,6 +25,7 @@ outputs:
         - pip
       run:
         - python >=3.6
+        - packaging
         - numpy
         - smirnoff99frosst
         - openff-forcefields
