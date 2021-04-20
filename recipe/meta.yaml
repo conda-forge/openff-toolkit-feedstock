@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.2" %}
 
 package:
   name: openff-toolkit-split
@@ -11,7 +11,7 @@ source:
     sha256: 17e6d7f5f1673fa5ebabce74c07c5017fa132dba2bebf17fde314fb1de00d167
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
