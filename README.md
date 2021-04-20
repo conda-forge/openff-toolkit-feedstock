@@ -46,6 +46,7 @@ Installing `openff-toolkit-split` from the `conda-forge` channel can be achieved
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `openff-toolkit, openff-toolkit-base` can be installed with:
