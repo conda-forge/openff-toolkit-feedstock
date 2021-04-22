@@ -64,7 +64,9 @@ outputs:
 
   - name: openff-toolkit-examples
     files:
-      - examples
+      - examples/*/*
+    build:
+      noarch: python
 
     requirements:
       run:
