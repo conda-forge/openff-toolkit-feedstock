@@ -63,8 +63,7 @@ outputs:
         - python test_openff_toolkit_base.py
 
   - name: openff-toolkit-examples
-    files:
-      - openff-toolkit-{{ version }}/examples
+    script: move-examples.sh
     build:
       noarch: python
 
