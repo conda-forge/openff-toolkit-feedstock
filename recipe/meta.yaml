@@ -11,7 +11,7 @@ source:
     sha256: 5bea41fdf5af5ffec8ca5203b714d0c7359507762df919cd42d1fec3b2de1686
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -30,7 +30,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openmm
-        - networkx
+        - networkx >=2.5
         - mdtraj
         - xmltodict
       run_constrained:
