@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 5bea41fdf5af5ffec8ca5203b714d0c7359507762df919cd42d1fec3b2de1686
+    sha256: b15aec2b0d4ae6384d96a6b53178a22be95ac39760b3a534ba740463eb819a27
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -30,7 +30,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openmm
-        - networkx
+        - networkx >=2.5
         - mdtraj
         - xmltodict
       run_constrained:
