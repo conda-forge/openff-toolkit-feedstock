@@ -14,7 +14,7 @@ def file_trees_match(left, right):
 
 def is_empty(path):
     """True if the given path contains no real files"""
-    return len([p for p in Path(path).glob("*") if p.is_file()]) == 0
+    return len([p for p in Path(path).glob("**") if p.is_file()]) == 0
 
 
 def main():
