@@ -78,6 +78,9 @@ outputs:
         - openmmforcefields
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
+    test:
+      script: test_examples_copied.py
+
 about:
   home: https://openforcefield.org/
   license: MIT
