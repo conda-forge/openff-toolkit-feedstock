@@ -10,6 +10,7 @@ source:
   - url: https://github.com/openforcefield/openff-toolkit/archive/refs/heads/examples_helper.zip
     sha256: 9e7b43a3e79760b3293c5ddb6556feb4196025e1f3325c3866cdc997c2d6b073
 
+
 build:
   number: 1
 
@@ -30,7 +31,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openmm
-        - networkx
+        - networkx >=2.5
         - mdtraj
         - xmltodict
       run_constrained:
