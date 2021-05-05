@@ -14,53 +14,53 @@ build:
   number: 1
 
 outputs:
-  - name: openff-toolkit-base
-    script: build_base.sh
-    build:
-      noarch: python
+  # - name: openff-toolkit-base
+  #   script: build_base.sh
+  #   build:
+  #     noarch: python
 
-    requirements:
-      host:
-        - python >=3.6
-        - pip
-      run:
-        - python >=3.6
-        - packaging
-        - numpy
-        - smirnoff99frosst
-        - openff-forcefields
-        - openmm
-        - networkx
-        - mdtraj
-        - xmltodict
-      run_constrained:
-        - openforcefield ==9999999999
+  #   requirements:
+  #     host:
+  #       - python >=3.6
+  #       - pip
+  #     run:
+  #       - python >=3.6
+  #       - packaging
+  #       - numpy
+  #       - smirnoff99frosst
+  #       - openff-forcefields
+  #       - openmm
+  #       - networkx
+  #       - mdtraj
+  #       - xmltodict
+  #     run_constrained:
+  #       - openforcefield ==9999999999
 
-    test:
-      imports:
-        - openff.toolkit
+  #   test:
+  #     imports:
+  #       - openff.toolkit
 
-  - name: openff-toolkit
-    build:
-      noarch: python
+  # - name: openff-toolkit
+  #   build:
+  #     noarch: python
 
-    requirements:
-      host:
-        - python >=3.6
-      run:
-        - python >=3.6
-        - rdkit
-        - ambertools >=20
-        - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
+  #   requirements:
+  #     host:
+  #       - python >=3.6
+  #     run:
+  #       - python >=3.6
+  #       - rdkit
+  #       - ambertools >=20
+  #       - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
 
-    test:
-      imports:
-        - openff.toolkit
-        - rdkit
-      files:
-        - test_openff_toolkit_base.py
-      commands:
-        - python test_openff_toolkit_base.py
+  #   test:
+  #     imports:
+  #       - openff.toolkit
+  #       - rdkit
+  #     files:
+  #       - test_openff_toolkit_base.py
+  #     commands:
+  #       - python test_openff_toolkit_base.py
 
   - name: openff-toolkit-examples
     script: move-examples.sh
@@ -69,6 +69,7 @@ outputs:
 
     requirements:
       run:
+        - python >=3.6
         - nglview
         - notebook
         - qcelemental
@@ -80,7 +81,7 @@ outputs:
     test:
       files:
         - test_examples_copied.py
-      source-files:
+      source_files:
         - examples
       commands:
         - python test_examples_copied.py

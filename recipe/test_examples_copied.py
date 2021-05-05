@@ -2,12 +2,12 @@
 
 from pathlib import Path
 from os import environ
-from sys import stderr
 
 
 def file_tree(path):
-    """Get the entire tree of real files at path, sorted into a list"""
-    return sorted([p for p in Path(path).glob("**") if p.is_file()])
+    """Get the entire tree of files at path, sorted into a list"""
+    root = Path(path)
+    return sorted([p.relative_to(root) for p in root.glob("**/*")])
 
 
 def main():
@@ -18,14 +18,13 @@ def main():
     repo_tree = file_tree(repo_path)
     installed_tree = file_tree(installed_path)
 
-    print("Working directory tree:", *file_tree("."), sep="\n    ")
-
     print("Source repository examples tree:", *repo_tree, sep="\n    ")
     print("Installed examples tree:", *installed_tree, sep="\n    ")
-    print("This message was sent to stderr, can you see it in Azure?", file=stderr)
 
-    assert repo_tree
-    assert repo_tree == installed_tree
+    assert repo_tree, "Source repository tree is empty"
+    assert (
+        repo_tree == installed_tree
+    ), "Source repository tree doesn't match installed tree"
 
 
 if __name__ == "__main__":
