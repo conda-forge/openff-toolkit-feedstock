@@ -79,7 +79,11 @@ outputs:
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
     test:
-      script: test_examples_copied.py
+      files:
+        - test_examples_copied.py
+        - examples
+      commands:
+        - python test_examples_copied.py
 
 about:
   home: https://openforcefield.org/

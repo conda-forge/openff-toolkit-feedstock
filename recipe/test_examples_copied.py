@@ -18,8 +18,8 @@ def main():
     repo_tree = file_tree(repo_path)
     installed_tree = file_tree(installed_path)
 
-    print("Source repository examples tree:", repo_tree, sep="\n")
-    print("Installed examples tree:", installed_tree, sep="\n")
+    print("Source repository examples tree:", *repo_tree, sep="\n    ")
+    print("Installed examples tree:", *installed_tree, sep="\n    ")
     print("This message was sent to stderr, can you see it in Azure?", file=stderr)
 
     assert repo_tree
