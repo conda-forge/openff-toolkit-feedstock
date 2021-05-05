@@ -71,7 +71,6 @@ outputs:
       run:
         - nglview
         - notebook
-        - gromacs
         - qcelemental
         - qcportal
         - qcengine
@@ -81,6 +80,7 @@ outputs:
     test:
       files:
         - test_examples_copied.py
+      source-files:
         - examples
       commands:
         - python test_examples_copied.py
