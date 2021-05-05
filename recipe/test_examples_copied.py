@@ -2,28 +2,28 @@
 
 from pathlib import Path
 from os import environ
+from sys import stderr
 
 
-def file_trees_match(left, right):
-    """True if the file paths at left and right have identical contents, false otherwise"""
-    a = Path(left).glob("**")
-    b = Path(right).glob("**")
-
-    return sorted(a) == sorted(b)
-
-
-def is_empty(path):
-    """True if the given path contains no real files"""
-    return len([p for p in Path(path).glob("**") if p.is_file()]) == 0
+def file_tree(path):
+    """Get the entire tree of real files at path, sorted into a list"""
+    return sorted([p for p in Path(path).glob("**") if p.is_file()])
 
 
 def main():
     """Entrypoint for this test"""
-    repo_examples = Path("examples")
-    installed_examples = Path(environ["CONDA_PREFIX"]) / "share/openff-toolkit/examples"
+    repo_path = Path("examples")
+    installed_path = Path(environ["CONDA_PREFIX"]) / "share/openff-toolkit/examples"
 
-    assert file_trees_match(repo_examples, installed_examples)
-    assert not is_empty(installed_examples)
+    repo_tree = file_tree(repo_path)
+    installed_tree = file_tree(installed_path)
+
+    print("Source repository examples tree:", repo_tree, sep="\n")
+    print("Installed examples tree:", installed_tree, sep="\n")
+    print("This message was sent to stderr, can you see it in Azure?", file=stderr)
+
+    assert repo_tree
+    assert repo_tree == installed_tree
 
 
 if __name__ == "__main__":
