@@ -24,7 +24,7 @@ def main():
     print("Installed examples tree:", *installed_tree, sep="\n    ")
 
     # Remove the helper script, which is moved to the bin directory during installation
-    repo_tree.remove("examples_helper.py")
+    repo_tree.remove(Path("examples_helper.py"))
 
     # Check that the (filtered) file trees match, and are not empty
     assert repo_tree, "Source repository tree is empty"
