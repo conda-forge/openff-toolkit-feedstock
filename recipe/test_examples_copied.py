@@ -33,7 +33,11 @@ def main():
     # Run the examples helper and check what files it copies over
     helper_test_path = Path("helper_test_target")
     helper_test_path.mkdir()
-    run("openff-toolkit-examples", cwd=helper_test_path, check=True)
+    run(
+        ["openff-toolkit-examples", "--include-deprecated"],
+        cwd=helper_test_path,
+        check=True,
+    )
     helper_test_tree = file_tree(helper_test_path / "examples")
 
     # Print and check the helper test
