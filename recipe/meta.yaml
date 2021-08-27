@@ -29,7 +29,7 @@ outputs:
         - numpy
         - smirnoff99frosst
         - openff-forcefields
-        - openmm
+        - openmm =7.5.*
         - networkx >=2.5
         - mdtraj
         - xmltodict
