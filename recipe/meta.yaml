@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: f25ceb15c85a09d778ad2a9e31b25b0f3cd3793e5cb6c93c0e206b1c2de6a84d
+    sha256: 703dcfb2afd21d0032ae9bf9d67a2af3d04a1c6360081423a877b47e9dfafc90
 
 build:
   number: 0
