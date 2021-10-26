@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: ca50e824b917e562aa01da2f77489f81538b82125d5b322665601ed37e9b06bd
+    sha256: f25ceb15c85a09d778ad2a9e31b25b0f3cd3793e5cb6c93c0e206b1c2de6a84d
 
 build:
   number: 0
@@ -58,9 +58,9 @@ outputs:
         - openff.toolkit
         - rdkit
       files:
-        - test_openff_toolkit_base.py
+        - test_openff_toolkit.py
       commands:
-        - python test_openff_toolkit_base.py
+        - python test_openff_toolkit.py
 
   - name: openff-toolkit-examples
     script: move-examples.sh
