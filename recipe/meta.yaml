@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.10.4" %}
+{% set version = "0.10.5" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 929c970f575a6bb12c6dec6d4eacec222d76e3dfb93e12cf6c83208936f703b1
+    sha256: 7399ab5b30638c657a7d8d0a8c4f8050e90b6bb1a7245a3e659e30c8b58ac823
 
 build:
   number: 0
@@ -35,6 +35,7 @@ outputs:
         - xmltodict
         - importlib-metadata >=4.10
         - python-constraint
+        - typing-extensions
       run_constrained:
         - openforcefield ==9999999999
 
