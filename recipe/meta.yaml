@@ -35,6 +35,7 @@ outputs:
         - xmltodict
         - importlib-metadata >=4.10
         - python-constraint
+        - typing-extensions
       run_constrained:
         - openforcefield ==9999999999
 
