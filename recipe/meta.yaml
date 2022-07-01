@@ -11,7 +11,7 @@ source:
     sha256: 81c7ec0bc801ba3d97a4eefd7f442320cf0bdc04c5d18e411f44a2b08fd9e0bf
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
