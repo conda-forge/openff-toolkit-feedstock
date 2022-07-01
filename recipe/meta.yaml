@@ -57,7 +57,7 @@ outputs:
       run:
         - python >=3.8
         - openmm >=7.6
-        # TODO: Add Interchange in subsequent builds
+        - openff-interchange ==0.2.0rc1
         - rdkit
         - ambertools >=20
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
