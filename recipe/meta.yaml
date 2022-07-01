@@ -11,7 +11,7 @@ source:
     sha256: 81c7ec0bc801ba3d97a4eefd7f442320cf0bdc04c5d18e411f44a2b08fd9e0bf
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -32,7 +32,6 @@ outputs:
         - openff-amber-ff-ports >=0.0.3
         - openff-units >=0.1.6
         - openff-utilities
-        # TODO: Add Interchange in subsequent builds
         - networkx >=2.5
         - mdtraj
         - xmltodict
@@ -58,6 +57,7 @@ outputs:
       run:
         - python >=3.8
         - openmm >=7.6
+        - openff-interchange ==0.2.0rc1
         - rdkit
         - ambertools >=20
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
