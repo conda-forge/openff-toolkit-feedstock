@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.10.6" %}
+{% set version = "0.11.0rc1" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: d323b911e7d96498a32b9eaf8215a84568b212ff9aa9207f1f8ed91fa0f9d322
+    sha256: 81c7ec0bc801ba3d97a4eefd7f442320cf0bdc04c5d18e411f44a2b08fd9e0bf
 
 build:
   number: 0
@@ -21,21 +21,26 @@ outputs:
 
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
-        - python >=3.6
+        - python >=3.8
         - packaging
         - numpy
         - smirnoff99frosst
         - openff-forcefields
-        - openmm
+        - openff-amber-ff-ports >=0.0.3
+        - openff-units >=0.1.6
+        - openff-utilities
+        # TODO: Add Interchange in subsequent builds
         - networkx >=2.5
         - mdtraj
         - xmltodict
         - importlib-metadata >=4.10
         - python-constraint
         - typing-extensions
+        - cachetools
+        - cached-property
       run_constrained:
         - openforcefield ==9999999999
 
@@ -49,9 +54,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
       run:
-        - python >=3.6
+        - python >=3.8
+        - openmm >=7.6
         - rdkit
         - ambertools >=20
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
@@ -72,7 +78,7 @@ outputs:
 
     requirements:
       run:
-        - python >=3.6
+        - python >=3.8
         - nglview
         - notebook
         - qcelemental
