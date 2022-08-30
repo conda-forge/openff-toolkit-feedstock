@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.11.0rc3" %}
+{% set version = "0.11.0" %}
 
 package:
   name: openff-toolkit-split
@@ -30,7 +30,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
-        - openff-units >=0.1.6
+        - openff-units >=0.1.7
         - openff-utilities
         - networkx >=2.5
         - mdtraj
@@ -57,7 +57,7 @@ outputs:
       run:
         - python >=3.8
         - openmm >=7.6
-        - openff-interchange >=0.2.0rc1
+        - openff-interchange >0.2.0rc6
         - rdkit
         - ambertools >=20
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
