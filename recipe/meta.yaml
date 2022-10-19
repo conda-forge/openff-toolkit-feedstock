@@ -85,7 +85,7 @@ outputs:
         - qcelemental
         - qcportal
         - qcengine
-        - openmmforcefields
+        - openmmforcefields  # Expected to bring in 0.11.2, add constraint if this is an issue
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
     test:
