@@ -11,7 +11,7 @@ source:
     sha256: 0f8a8fcb8a4c8c31b7a5b23a48210de32c16d4d733f477ba759b549fb49a04a5
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: openff-toolkit-base
@@ -31,6 +31,7 @@ outputs:
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
         - openff-units >=0.1.7
+        - pint <0.20 # remove once this pin is propagated to openff-units package
         - openff-utilities
         - networkx >=2.5
         - mdtraj
