@@ -31,7 +31,7 @@ outputs:
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
         - openff-units >=0.1.7
-	- pint <0.20
+	- pint <0.20 # remove once this pin is propagated to openff-units package
         - openff-utilities
         - networkx >=2.5
         - mdtraj
