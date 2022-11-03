@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.11.2" %}
+{% set version = "0.11.3" %}
 
 package:
   name: openff-toolkit-split
@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 0f8a8fcb8a4c8c31b7a5b23a48210de32c16d4d733f477ba759b549fb49a04a5
+    sha256: 13ae05fb64dff01c1b970d9c76b0687ae0cd9dbb2fdf3689000a667798ebaf18
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -30,15 +30,12 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
-        - openff-units >=0.1.7
-        - pint <0.20 # remove once this pin is propagated to openff-units package
+        - openff-units >=0.2.0
         - openff-utilities
         - networkx >=2.5
-        - mdtraj
         - xmltodict
         - importlib-metadata >=4.10
         - python-constraint
-        - typing-extensions
         - cachetools
         - cached-property
       run_constrained:
@@ -61,8 +58,10 @@ outputs:
         - openff-interchange >=0.2.0
         - rdkit
         - ambertools >=20
+        - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
+        - ipywidgets =7
 
     test:
       imports:
