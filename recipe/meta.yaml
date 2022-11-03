@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 8a8628174c6a1dc4f37048db00a78a46cd0d387809fc49842632b5076b6a6188
+    sha256: 13ae05fb64dff01c1b970d9c76b0687ae0cd9dbb2fdf3689000a667798ebaf18
 
 build:
   number: 0
@@ -33,7 +33,6 @@ outputs:
         - openff-units >=0.2.0
         - openff-utilities
         - networkx >=2.5
-        - mdtraj
         - xmltodict
         - importlib-metadata >=4.10
         - python-constraint
@@ -59,6 +58,7 @@ outputs:
         - openff-interchange >=0.2.0
         - rdkit
         - ambertools >=20
+        - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
 	- ipywidgets >=7,<8
