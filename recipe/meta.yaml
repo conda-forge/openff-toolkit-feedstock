@@ -61,7 +61,7 @@ outputs:
         - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
-	- ipywidgets >=7,<8
+        - ipywidgets =7
 
     test:
       imports:
