@@ -61,6 +61,7 @@ outputs:
         - ambertools >=20
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
+	- ipywidgets >=7,<8
 
     test:
       imports:
