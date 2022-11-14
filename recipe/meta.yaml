@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.11.3" %}
+{% set version = "0.11.4" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 13ae05fb64dff01c1b970d9c76b0687ae0cd9dbb2fdf3689000a667798ebaf18
+    sha256: 361fdee66b50fd167ad275f1a85707530c7c571b4d3e8c7143da3c55b8384ab2
 
 build:
   number: 0
@@ -40,7 +40,7 @@ outputs:
         - cached-property
       run_constrained:
         - openforcefield ==9999999999
-
+        - importlib_metadata >=4.10 # https://github.com/conda-forge/openff-toolkit-feedstock/pull/37#issuecomment-1314260590
     test:
       imports:
         - openff.toolkit
