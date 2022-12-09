@@ -25,7 +25,7 @@ outputs:
         - pip
       run:
         - python >=3.8
-        - packaging
+        - packaging =0.21
         - numpy
         - smirnoff99frosst
         - openff-forcefields
