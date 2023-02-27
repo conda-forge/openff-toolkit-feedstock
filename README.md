@@ -1,11 +1,11 @@
-About openff-toolkit-split
-==========================
+About openff-toolkit-split-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-toolkit-feedstock/blob/main/LICENSE.txt)
 
 Home: https://openforcefield.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-toolkit-feedstock/blob/main/LICENSE.txt)
 
 Summary: A modern, extensible library for molecular mechanics force field science from the Open Force Field Initiative
 
