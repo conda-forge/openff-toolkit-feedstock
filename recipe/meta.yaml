@@ -1,6 +1,6 @@
 {% set name = "openff-toolkit" %}
 {% set version = "0.12.1" %}
-
+ 
 package:
   name: openff-toolkit-split
   version: {{ version }}
