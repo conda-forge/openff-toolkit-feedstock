@@ -56,7 +56,7 @@ outputs:
       run:
         - python >=3.8
         - openmm >=7.6
-        - openff-interchange >=0.2.0,<0.3.0a0
+        - openff-interchange =0.2
         - rdkit
         - ambertools >=20
         - mdtraj
