@@ -58,7 +58,7 @@ outputs:
         - openmm >=7.6
         - openff-interchange >=0.3.0
         - rdkit
-        - ambertools >=20
+        - ambertools >=22
         - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
