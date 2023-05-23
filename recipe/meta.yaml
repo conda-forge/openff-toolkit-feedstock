@@ -38,7 +38,7 @@ outputs:
         - python-constraint
         - cachetools
         - cached-property
-        - typing_extensions
+        - typing_extensions !=4.6.0
       run_constrained:
         - openforcefield ==9999999999
         - importlib_metadata >=4.10 # https://github.com/conda-forge/openff-toolkit-feedstock/pull/37#issuecomment-1314260590
