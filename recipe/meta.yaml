@@ -11,7 +11,7 @@ source:
     sha256: a1a4647ecaae364a8c8321c4c792d68f0336588c435156d24ac5153eb88b9032
 
 build:
-  number: 0
+  number: 10
 
 outputs:
   - name: openff-toolkit-base
@@ -62,7 +62,7 @@ outputs:
         - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - notebook
-        - ipywidgets =7
+        - ipywidgets
 
     test:
       imports:
