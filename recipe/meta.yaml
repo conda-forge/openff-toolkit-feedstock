@@ -41,7 +41,8 @@ outputs:
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
-        - importlib_metadata >=4.10 # https://github.com/conda-forge/openff-toolkit-feedstock/pull/37#issuecomment-1314260590
+        - pydantic =1
+
     test:
       imports:
         - openff.toolkit
