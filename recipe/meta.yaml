@@ -11,7 +11,7 @@ source:
     sha256: a1a4647ecaae364a8c8321c4c792d68f0336588c435156d24ac5153eb88b9032
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: openff-toolkit-base
@@ -34,6 +34,7 @@ outputs:
         - openff-utilities
         - networkx >=2.5
         - xmltodict
+        - bson
         - importlib-metadata >=4.10
         - python-constraint
         - cachetools
@@ -41,7 +42,8 @@ outputs:
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
-        - importlib_metadata >=4.10 # https://github.com/conda-forge/openff-toolkit-feedstock/pull/37#issuecomment-1314260590
+        - pydantic =1
+
     test:
       imports:
         - openff.toolkit
