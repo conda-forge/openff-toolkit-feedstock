@@ -34,6 +34,7 @@ outputs:
         - openff-utilities
         - networkx >=2.5
         - xmltodict
+        - bson
         - importlib-metadata >=4.10
         - python-constraint
         - cachetools
