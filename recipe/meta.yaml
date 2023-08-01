@@ -11,7 +11,7 @@ source:
     sha256: a1a4647ecaae364a8c8321c4c792d68f0336588c435156d24ac5153eb88b9032
 
 build:
-  number: 4
+  number: 5
 
 outputs:
   - name: openff-toolkit-base
@@ -42,7 +42,7 @@ outputs:
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
-        - pydantic >=1.8.2,<1.10.12
+        - pydantic >=1.8.2
 
     test:
       imports:
