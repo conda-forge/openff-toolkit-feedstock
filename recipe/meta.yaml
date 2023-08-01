@@ -67,6 +67,8 @@ outputs:
         - ipywidgets
 
     test:
+      requires:
+        - pydantic =2
       imports:
         - openff.toolkit
         - rdkit
