@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: openff-toolkit-split
@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: a1a4647ecaae364a8c8321c4c792d68f0336588c435156d24ac5153eb88b9032
+    sha256: 736fd5aa6e5f08faf55dd51708849184bf8cd4230d35a3ac189d6843f8faba69
 
 build:
-  number: 4
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
