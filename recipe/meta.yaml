@@ -42,7 +42,7 @@ outputs:
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
-
+        - pydantic <3.0.0a0
     test:
       imports:
         - openff.toolkit
