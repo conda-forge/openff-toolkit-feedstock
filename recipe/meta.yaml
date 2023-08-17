@@ -11,7 +11,7 @@ source:
     sha256: f4c6a5b948a3bfdf87e720118ea6c510e2739a1f6addda3739f868a15b9780f2
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -30,7 +30,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
-        - openff-units >=0.2.0
+        - openff-units >=0.2.1
         - openff-utilities
         - networkx >=2.5
         - xmltodict
