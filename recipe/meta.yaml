@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.14.3" %}
+{% set version = "0.14.4" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: f4c6a5b948a3bfdf87e720118ea6c510e2739a1f6addda3739f868a15b9780f2
+    sha256: 15a3cb31c19a8905cf020d8201a60e55aeef4a348999c2062d661e032ed09a75
 
 build:
   number: 0
@@ -85,7 +85,7 @@ outputs:
         - nglview
         - notebook
         - qcelemental
-        - qcportal
+        - qcportal <0.50
         - qcengine
         - openmmforcefields  # Expected to bring in 0.11.2, add constraint if this is an issue
         - pdbfixer
