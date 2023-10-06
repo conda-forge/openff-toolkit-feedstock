@@ -21,7 +21,7 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python >=3.9,<3.12
         - pip
       run:
         - python >=3.9
@@ -30,7 +30,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.3
-        - openff-units >=0.2.0
+        - openff-units >=0.2.1
         - openff-utilities
         - networkx >=2.5
         - xmltodict
@@ -53,7 +53,7 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python >=3.9,<3.12
       run:
         - python >=3.9
         - openmm >=7.6
