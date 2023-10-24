@@ -84,8 +84,7 @@ outputs:
         - python >=3.9
         - nglview
         - notebook
-        - openff-nagl
-        - openff-nagl-models
+        - openff-nagl >=0.3.1
         - qcelemental
         - qcportal <0.50
         - qcengine
