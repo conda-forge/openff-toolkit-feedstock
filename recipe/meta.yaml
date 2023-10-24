@@ -11,7 +11,7 @@ source:
     sha256: 15a3cb31c19a8905cf020d8201a60e55aeef4a348999c2062d661e032ed09a75
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -84,10 +84,12 @@ outputs:
         - python >=3.9
         - nglview
         - notebook
+        - openff-nagl
+        - openff-nagl-models
         - qcelemental
         - qcportal <0.50
         - qcengine
-        - openmmforcefields  # Expected to bring in 0.11.2, add constraint if this is an issue
+        - openmmforcefields 
         - pdbfixer
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
