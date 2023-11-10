@@ -11,7 +11,7 @@ source:
     sha256: 825d324150782182306f7d13ccd1c5c70ce46d7b23f013b396c396b334fa57d9
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -90,7 +90,7 @@ outputs:
         - qcelemental
         - qcportal <0.50
         - qcengine
-        - openmmforcefields 
+        - openmmforcefields
         - pdbfixer
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
       run_constrained:
