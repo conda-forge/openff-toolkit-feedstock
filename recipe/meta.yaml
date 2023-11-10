@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.14.4" %}
+{% set version = "0.14.5" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: a6cadb44377aed6ed2e2ac5d63d16dd38efdca1c97ad81c43b472b05acd4455d
+    sha256: 825d324150782182306f7d13ccd1c5c70ce46d7b23f013b396c396b334fa57d9
 
 build:
   number: 1
@@ -29,7 +29,8 @@ outputs:
         - numpy =1
         - smirnoff99frosst
         - openff-forcefields
-        - openff-amber-ff-ports >=0.0.3
+        - openff-amber-ff-ports >=0.0.4
+        - openff-units >=0.2.0
         - openff-units >=0.2.1
         - openff-utilities
         - networkx >=2.5
@@ -43,6 +44,7 @@ outputs:
       run_constrained:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
+
     test:
       imports:
         - openff.toolkit
@@ -57,7 +59,7 @@ outputs:
       run:
         - python >=3.9
         - openmm >=7.6
-        - openff-interchange >=0.3.0
+        - openff-interchange >=0.3.17
         - rdkit
         - ambertools >=22
         - mdtraj
@@ -91,6 +93,9 @@ outputs:
         - openmmforcefields 
         - pdbfixer
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
+      run_constrained:
+        # QCPortal has not been updated to work with Pydantic 2
+        - pydantic =1
 
     test:
       files:
