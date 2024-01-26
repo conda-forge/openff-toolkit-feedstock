@@ -89,14 +89,11 @@ outputs:
         - notebook
         - openff-nagl >=0.3.1
         - qcelemental
-        - qcportal <0.50
+        - qcportal >=0.50.0
         - qcengine
         - openmmforcefields 
         - pdbfixer
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
-      run_constrained:
-        # QCPortal has not been updated to work with Pydantic 2
-        - pydantic =1
 
     test:
       files:
