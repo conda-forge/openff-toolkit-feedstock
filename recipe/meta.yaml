@@ -44,7 +44,7 @@ outputs:
       run_constrained:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
-	- qcportal >=0.50.0
+        - qcportal >=0.50.0
 
     test:
       imports:
