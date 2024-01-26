@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.14.5" %}
+{% set version = "0.15.0" %}
 
 package:
   name: openff-toolkit-split
@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 825d324150782182306f7d13ccd1c5c70ce46d7b23f013b396c396b334fa57d9
+    sha256: bc72a4b5e697029c5747446a94201a05fae6149d8ae6dac171eced08c4b6d059
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -44,6 +44,7 @@ outputs:
       run_constrained:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
+	- qcportal >=0.50.0
 
     test:
       imports:
