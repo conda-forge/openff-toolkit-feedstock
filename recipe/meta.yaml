@@ -11,7 +11,7 @@ source:
     sha256: bc72a4b5e697029c5747446a94201a05fae6149d8ae6dac171eced08c4b6d059
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -31,7 +31,6 @@ outputs:
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
         - openff-units >=0.2.0
-        - openff-units >=0.2.1
         - openff-utilities
         - networkx >=2.5
         - xmltodict
@@ -60,7 +59,7 @@ outputs:
       run:
         - python >=3.9
         - openmm >=7.6
-        - openff-interchange >=0.3.17
+        - openff-interchange >=0.3.18
         - rdkit
         - ambertools >=22
         - mdtraj
