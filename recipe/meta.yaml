@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: openff-toolkit-split
@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: bc72a4b5e697029c5747446a94201a05fae6149d8ae6dac171eced08c4b6d059
+    sha256: d101da18d8a2ea6bad94ac2bc2604b01b4e5f7fab16d421e89f63603ebf51bb6
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -90,7 +90,7 @@ outputs:
         - qcelemental
         - qcportal >=0.50.0
         - qcengine
-        - openmmforcefields 
+        - openmmforcefields
         - pdbfixer
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
