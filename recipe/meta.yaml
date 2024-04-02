@@ -11,7 +11,7 @@ source:
     sha256: 7c07034c319305c4bbc80876efa82507f8d44ce348e9d699cc527fbd4612db7c
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -64,8 +64,6 @@ outputs:
         - ambertools >=22
         - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
-        - notebook
-        - ipywidgets
 
     test:
       imports:
@@ -84,8 +82,8 @@ outputs:
     requirements:
       run:
         - python >=3.9
+        - jupyterlab
         - nglview
-        - notebook
         - openff-nagl >=0.3.1
         - qcelemental
         - qcportal >=0.50.0
