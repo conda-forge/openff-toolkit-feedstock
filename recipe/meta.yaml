@@ -64,8 +64,6 @@ outputs:
         - ambertools >=22
         - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
-        - notebook
-        - ipywidgets
 
     test:
       imports:
@@ -84,8 +82,8 @@ outputs:
     requirements:
       run:
         - python >=3.9
+        - jupyterlab
         - nglview
-        - notebook
         - openff-nagl >=0.3.1
         - qcelemental
         - qcportal >=0.50.0
