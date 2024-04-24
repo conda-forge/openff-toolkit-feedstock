@@ -4,7 +4,7 @@ from openff.toolkit.utils.toolkits import (
     RDKitToolkitWrapper,
 )
 
-from qcportal improt PortalClient
+from qcportal import PortalClient
 
 from openff.toolkit.topology import Molecule, Topology
 from openff.toolkit.typing.engines.smirnoff import ForceField
