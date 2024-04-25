@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: e46cec736ce6d5c97bb17c996869737b91f322f4736ead1493bcb94acc066948
+    sha256: 1c1aa2ac9fff7c1613168531884da4ade53cbe21069022c999996d7effd2474c
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -44,6 +44,8 @@ outputs:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
         - qcportal >=0.50.0
+        # Remove when OpenEye has builds that use zstandard >=0.19
+        - zstandard ==0.18
 
     test:
       imports:
@@ -68,6 +70,8 @@ outputs:
         - ipywidgets
 
     test:
+      requires:
+        - qcportal
       imports:
         - openff.toolkit
         - rdkit
