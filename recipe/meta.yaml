@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: openff-toolkit-split
@@ -8,10 +8,10 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 1c1aa2ac9fff7c1613168531884da4ade53cbe21069022c999996d7effd2474c
+    sha256: 3a761d804f3a0e88a6ced2964c4dcfe0b7a7a0892f075aea657dc94af39c7096
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -61,7 +61,7 @@ outputs:
       run:
         - python >=3.9
         - openmm >=7.6
-        - openff-interchange >=0.3.18
+        - openff-interchange >=0.3.19
         - rdkit
         - ambertools >=22
         - mdtraj
