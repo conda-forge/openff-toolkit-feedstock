@@ -11,7 +11,7 @@ source:
     sha256: 3a761d804f3a0e88a6ced2964c4dcfe0b7a7a0892f075aea657dc94af39c7096
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -26,7 +26,7 @@ outputs:
       run:
         - python >=3.9
         - packaging
-        - numpy =1
+        - numpy
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
