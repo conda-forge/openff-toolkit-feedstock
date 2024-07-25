@@ -11,7 +11,7 @@ source:
     sha256: 0d0e8d1a85cc46271813668d136caa78798ad7796ccfc2bea5b40038c0ef2b26
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -44,8 +44,6 @@ outputs:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
         - qcportal >=0.50.0
-        # Remove when OpenEye has builds that use zstandard >=0.19
-        - zstandard ==0.18
 
     test:
       imports:
