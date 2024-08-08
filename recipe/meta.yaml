@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.16.2" %}
+{% set version = "0.16.3" %}
 
 package:
   name: openff-toolkit-split
@@ -8,7 +8,7 @@ package:
 source:
   - path: ./build_base.sh
   - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: 0d0e8d1a85cc46271813668d136caa78798ad7796ccfc2bea5b40038c0ef2b26
+    sha256: aeadd65152f24aa7dba4c795b3416f34c547215aeb7271fcdcaaf0cab402dbb4
 
 build:
   number: 0
@@ -26,7 +26,7 @@ outputs:
       run:
         - python >=3.9
         - packaging
-        - numpy =1
+        - numpy
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
@@ -89,7 +89,7 @@ outputs:
       run:
         - python >=3.9
         - nglview
-        - notebook
+        - jupyterlab
         - openff-nagl >=0.3.7
         - qcelemental
         - qcportal >=0.50.0
