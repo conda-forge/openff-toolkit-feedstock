@@ -11,7 +11,7 @@ source:
     sha256: aeadd65152f24aa7dba4c795b3416f34c547215aeb7271fcdcaaf0cab402dbb4
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -61,7 +61,7 @@ outputs:
       run:
         - python >=3.9
         - openmm >=7.6
-        - openff-interchange ~=0.3.19
+        - openff-interchange >=0.3.19
         - rdkit
         - ambertools >=22
         - mdtraj
