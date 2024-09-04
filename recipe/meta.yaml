@@ -45,8 +45,6 @@ outputs:
         - openforcefield ==9999999999
         - pydantic <3.0.0a0
         - qcportal >=0.50.0
-        # Remove when OpenEye has builds that use zstandard >=0.19
-        - zstandard ==0.18
 
     test:
       imports:
