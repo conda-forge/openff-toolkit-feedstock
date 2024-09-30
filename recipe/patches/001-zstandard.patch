@@ -1,0 +1,12 @@
+diff --git a/openff/toolkit/utils/openeye_wrapper.py b/openff/toolkit/utils/openeye_wrapper.py
+index b644b4d7..be4f4fd1 100644
+--- a/openff/toolkit/utils/openeye_wrapper.py
++++ b/openff/toolkit/utils/openeye_wrapper.py
+@@ -6,6 +6,7 @@ the `OpenEye Toolkit <https://docs.eyesopen.com/toolkits/python/quickstart-pytho
+ __all__ = ("OpenEyeToolkitWrapper",)
+ 
+ 
++import zstandard  # noqa
+ import importlib
+ import logging
+ import pathlib

@@ -6,9 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  - path: ./build_base.sh
-  - url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-    sha256: dc627a0b328a5e40037fe402677a5c020210d0afcbcb9778c3d1202f04402786
+  path: ./build_base.sh
+  url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
+  sha256: dc627a0b328a5e40037fe402677a5c020210d0afcbcb9778c3d1202f04402786
+  patches:
+    - patches/001-zstandard.patch
 
 build:
   number: 2
