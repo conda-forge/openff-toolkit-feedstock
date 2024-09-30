@@ -13,7 +13,7 @@ source:
     - patches/001-zstandard.patch
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: openff-toolkit-base
