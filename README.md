@@ -43,14 +43,14 @@ Current release info
 Installing openff-toolkit-split
 ===============================
 
-Installing `openff-toolkit-split` from the `conda-forge/label/openff-interchange_rc` channel can be achieved by adding `conda-forge/label/openff-interchange_rc` to your channels with:
+Installing `openff-toolkit-split` from the `conda-forge/label/openff-toolkit_rc` channel can be achieved by adding `conda-forge/label/openff-toolkit_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/openff-interchange_rc
+conda config --add channels conda-forge/label/openff-toolkit_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/openff-interchange_rc` channel has been enabled, `openff-toolkit, openff-toolkit-base, openff-toolkit-examples` can be installed with `conda`:
+Once the `conda-forge/label/openff-toolkit_rc` channel has been enabled, `openff-toolkit, openff-toolkit-base, openff-toolkit-examples` can be installed with `conda`:
 
 ```
 conda install openff-toolkit openff-toolkit-base openff-toolkit-examples
@@ -65,26 +65,26 @@ mamba install openff-toolkit openff-toolkit-base openff-toolkit-examples
 It is possible to list all of the versions of `openff-toolkit` available on your platform with `conda`:
 
 ```
-conda search openff-toolkit --channel conda-forge/label/openff-interchange_rc
+conda search openff-toolkit --channel conda-forge/label/openff-toolkit_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search openff-toolkit --channel conda-forge/label/openff-interchange_rc
+mamba search openff-toolkit --channel conda-forge/label/openff-toolkit_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search openff-toolkit --channel conda-forge/label/openff-interchange_rc
+mamba repoquery search openff-toolkit --channel conda-forge/label/openff-toolkit_rc
 
 # List packages depending on `openff-toolkit`:
-mamba repoquery whoneeds openff-toolkit --channel conda-forge/label/openff-interchange_rc
+mamba repoquery whoneeds openff-toolkit --channel conda-forge/label/openff-toolkit_rc
 
 # List dependencies of `openff-toolkit`:
-mamba repoquery depends openff-toolkit --channel conda-forge/label/openff-interchange_rc
+mamba repoquery depends openff-toolkit --channel conda-forge/label/openff-toolkit_rc
 ```
 
 
