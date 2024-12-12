@@ -13,7 +13,7 @@ from qcportal import PortalClient
 
 # partially safeguard against a malformed version number;
 # 0.minor.patch and major.0.patch should be okay but not 0.0.patch
-found_version == Version(__version__)
+found_version = Version(__version__)
 assert not (found_version.minor == 0 and found_version.major == 0)
 
 print(GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions)
