@@ -7,7 +7,7 @@ package:
 
 
 source:
-  git_url: https://github.com/openforcefield/{{ name}}.git
+  git_url: https://github.com/openforcefield/{{ name }}.git
   git_rev: {{ version }}
   git_depth: -1
 
