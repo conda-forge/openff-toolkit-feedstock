@@ -1,14 +1,14 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.16.6" %}
+{% set version = "0.16.7" %}
 
 package:
   name: openff-toolkit-split
   version: {{ version }}
 
 source:
-  path: ./build_base.sh
-  url: https://github.com/openforcefield/openff-toolkit/archive/{{ version }}.tar.gz
-  sha256: a763258e35254b1742a479ba8df9316a5383e8b791bceacde7cf893bbbe69109
+  git_url: https://github.com/openforcefield/{{ name }}.git
+  git_rev: {{ version }}
+  git_depth: -1
 
 build:
   number: 0
@@ -21,9 +21,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.12
+        - python >=3.9,<3.13
         - pip
         - setuptools
+        - versioningit
       run:
         - python >=3.9
         - packaging
@@ -56,7 +57,7 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.12
+        - python >=3.9,<3.13
       run:
         - python >=3.9
         - openmm >=7.6
@@ -115,7 +116,7 @@ about:
     The Open Force Field Toolkit, built by the Open Force Field Initiative, is a Python
     toolkit for the development and application of modern molecular mechanics force fields
     based on direct chemical perception and rigorous statistical parameterization methods.
-  doc_url: https://open-forcefield-toolkit.readthedocs.io/
+  doc_url: https://docs.openforcefield.org/projects/toolkit/en/stable/
   dev_url: https://github.com/openforcefield/openff-toolkit
 
 extra:
