@@ -14,9 +14,11 @@ from qcportal import PortalClient
 # partially safeguard against a malformed version number;
 # 0.minor.patch and major.0.patch should be okay but not 0.0.patch
 found_version = Version(__version__)
-assert not (found_version.minor == 0 and found_version.major == 0)
+assert not (found_version.minor == 0 and found_version.major == 0), found_version
 
-print(GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions)
+print("found version {found_version}")
+
+print(f"{GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions=}")
 
 assert RDKitToolkitWrapper().is_available()
 assert AmberToolsToolkitWrapper().is_available()
