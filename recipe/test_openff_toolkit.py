@@ -1,13 +1,20 @@
+from openff.toolkit import __version__
+from openff.toolkit.topology import Molecule, Topology
+from openff.toolkit.typing.engines.smirnoff import ForceField
 from openff.toolkit.utils.toolkits import (
     GLOBAL_TOOLKIT_REGISTRY,
     AmberToolsToolkitWrapper,
     RDKitToolkitWrapper,
 )
 
+from packaging.version import Version
 from qcportal import PortalClient
 
-from openff.toolkit.topology import Molecule, Topology
-from openff.toolkit.typing.engines.smirnoff import ForceField
+
+# partially safeguard against a malformed version number;
+# 0.minor.patch and major.0.patch should be okay but not 0.0.patch
+found_version == Version(__version__)
+assert not (found_version.minor == 0 and found_version.major == 0)
 
 print(GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions)
 
