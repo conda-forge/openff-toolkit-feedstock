@@ -21,12 +21,12 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.13
+        - python {{ python_min }}
         - pip
         - setuptools
         - versioningit
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - packaging
         - numpy
         - smirnoff99frosst
@@ -48,6 +48,8 @@ outputs:
         - qcportal >=0.50.0
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - openff.toolkit
 
@@ -57,9 +59,9 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.13
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }},<3.13.0a0
         - openmm >=7.6
         - openff-interchange ~=0.4.0
         - rdkit !=2024.03.6
@@ -71,6 +73,7 @@ outputs:
 
     test:
       requires:
+        - python {{ python_min }}
         - qcportal
       imports:
         - openff.toolkit
@@ -87,7 +90,7 @@ outputs:
 
     requirements:
       run:
-        - python >=3.9
+        - python >={{ python_min }},<3.13.0a0
         - nglview
         - jupyterlab
         - openff-nagl >=0.3.7
