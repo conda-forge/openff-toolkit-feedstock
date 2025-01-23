@@ -11,7 +11,7 @@ Summary: A modern, extensible library for molecular mechanics force field scienc
 
 Development: https://github.com/openforcefield/openff-toolkit
 
-Documentation: https://open-forcefield-toolkit.readthedocs.io/
+Documentation: https://docs.openforcefield.org/projects/toolkit/en/stable/
 
 The Open Force Field Toolkit, built by the Open Force Field Initiative, is a Python
 toolkit for the development and application of modern molecular mechanics force fields
