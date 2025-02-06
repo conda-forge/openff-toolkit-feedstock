@@ -32,7 +32,7 @@ outputs:
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
-        - openff-units >=0.2.0
+        - openff-units ~=0.2.0
         - openff-utilities
         - networkx >=2.5
         - xmltodict
