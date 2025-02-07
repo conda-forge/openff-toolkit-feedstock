@@ -11,7 +11,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -21,18 +21,18 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.13
+        - python {{ python_min }}
         - pip
         - setuptools
         - versioningit
       run:
-        - python >=3.9
+        - python >={{ python_min }},<3.13
         - packaging
         - numpy
         - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
-        - openff-units >=0.2.0
+        - openff-units ~=0.2.0
         - openff-utilities
         - networkx >=2.5
         - xmltodict
@@ -57,9 +57,9 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9,<3.13
+        - python {{ python_min }}
       run:
-        - python >=3.9
+        - python >={{ python_min }},<3.13
         - openmm >=7.6
         - openff-interchange ~=0.4.0
         - rdkit !=2024.03.6
@@ -87,7 +87,7 @@ outputs:
 
     requirements:
       run:
-        - python >=3.9
+        - python {{ python_min }}
         - nglview
         - jupyterlab
         - openff-nagl >=0.3.7
