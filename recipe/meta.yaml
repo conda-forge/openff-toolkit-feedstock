@@ -11,7 +11,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -26,7 +26,7 @@ outputs:
         - setuptools
         - versioningit
       run:
-        - python >={{ python_min }},<3.13
+        - python >={{ python_min }},<3.14
         - packaging
         - numpy
         - smirnoff99frosst
@@ -48,6 +48,8 @@ outputs:
         - qcportal >=0.50.0
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - openff.toolkit
 
@@ -59,7 +61,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.13
+        - python >={{ python_min }},<3.14
         - openmm >=7.6
         - openff-interchange ~=0.4.0
         - rdkit !=2024.03.6
@@ -71,6 +73,7 @@ outputs:
 
     test:
       requires:
+        - python {{ python_min }}
         - qcportal
       imports:
         - openff.toolkit
@@ -99,6 +102,8 @@ outputs:
         - {{ pin_subpackage('openff-toolkit', exact=True) }}
 
     test:
+      requires:
+        - python {{ python_min }}
       files:
         - test_examples_copied.py
       source_files:
