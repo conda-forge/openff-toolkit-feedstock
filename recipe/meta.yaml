@@ -26,7 +26,7 @@ outputs:
         - setuptools
         - versioningit
       run:
-        - python >={{ python_min }},<3.13
+        - python >={{ python_min }},<3.14
         - packaging
         - numpy
         - smirnoff99frosst
@@ -59,7 +59,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.13
+        - python >={{ python_min }},<3.14
         - openmm >=7.6
         - openff-interchange ~=0.4.0
         - rdkit !=2024.03.6
