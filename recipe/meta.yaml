@@ -61,7 +61,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.14
+        - python >={{ python_min }},<3.14a0
         - openmm >=7.6
         - openff-interchange ~=0.4.0
         - rdkit !=2024.03.6
