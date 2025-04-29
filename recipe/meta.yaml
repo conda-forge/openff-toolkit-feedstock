@@ -89,8 +89,10 @@ outputs:
       noarch: python
 
     requirements:
+      host:
+        - python {{ python_min }}
       run:
-        - python >={{ python_min }}, <3.13
+        - python >={{ python_min }},<3.13
         - nglview
         - jupyterlab
         - openff-nagl >=0.4
