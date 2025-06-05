@@ -11,7 +11,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -40,7 +40,6 @@ outputs:
         - importlib-metadata >=4.10
         - python-constraint
         - cachetools
-        - cached-property
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
