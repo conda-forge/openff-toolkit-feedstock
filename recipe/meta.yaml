@@ -39,7 +39,6 @@ outputs:
         - bson
         - python-constraint
         - cachetools
-        - cached-property
         - typing_extensions
       run_constrained:
         - openforcefield ==9999999999
