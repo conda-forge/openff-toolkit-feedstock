@@ -65,7 +65,7 @@ outputs:
         - rdkit !=2024.03.6
         - ambertools >=22
         - mdtraj
-        - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
+        - {{ pin_subpackage('openff-toolkit-base', exact=True) }} 
         - notebook
         - ipywidgets
         - openff-nagl >=0.4
