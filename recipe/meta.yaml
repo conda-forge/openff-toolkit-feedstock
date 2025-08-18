@@ -1,5 +1,6 @@
 {% set name = "openff-toolkit" %}
 {% set version = "0.17.0" %}
+{% set python_min = '3.11' %}
 
 package:
   name: openff-toolkit-split
