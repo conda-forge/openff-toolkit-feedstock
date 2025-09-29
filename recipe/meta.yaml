@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -30,7 +30,6 @@ outputs:
         - python >={{ python_min }},<3.14a0
         - packaging
         - numpy
-        - smirnoff99frosst
         - openff-forcefields
         - openff-amber-ff-ports >=0.0.4
         - openff-units
