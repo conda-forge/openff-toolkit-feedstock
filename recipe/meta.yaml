@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 {% set python_min = '3.11' %}
 
 package:
@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
