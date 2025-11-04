@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.0" %}
 {% set python_min = '3.11' %}
 
 package:
