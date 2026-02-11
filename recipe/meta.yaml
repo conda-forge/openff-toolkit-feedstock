@@ -31,7 +31,7 @@ outputs:
         - packaging
         - numpy
         - openff-forcefields
-        - openff-amber-ff-ports >=0.0.4
+        - openff-amber-ff-ports >=2025.09.0
         - openff-units
         - openff-utilities
         - networkx >=2.5
