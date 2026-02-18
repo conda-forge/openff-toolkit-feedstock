@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: openff-toolkit-base
@@ -35,7 +35,7 @@ outputs:
         - openff-units
         - openff-utilities
         - networkx >=2.5
-        - xmltodict
+        - xmltodict <1.0.3
         - bson
         - python-constraint
         - cachetools
