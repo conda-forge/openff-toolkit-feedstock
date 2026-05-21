@@ -6,6 +6,8 @@ set -eu -o pipefail
 echo "CONDA_PREFIX is: "
 echo $CONDA_PREFIX
 
+env
+
 mkdir -p "$CONDA_PREFIX/share/openff-toolkit"
 cp -r examples "$CONDA_PREFIX/share/openff-toolkit"
 
