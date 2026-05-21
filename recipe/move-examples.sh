@@ -3,6 +3,7 @@
 # Shell safety: Exit script on error, treat unset variables as error, propagate errors out of pipelines
 set -eu -o pipefail
 
+echo "CONDA_PREFIX is: "
 echo $CONDA_PREFIX
 
 mkdir -p "$CONDA_PREFIX/share/openff-toolkit"
