@@ -3,7 +3,7 @@ from openff.toolkit.topology import Molecule, Topology
 from openff.toolkit.typing.engines.smirnoff import ForceField
 from openff.toolkit.utils.toolkits import (
     GLOBAL_TOOLKIT_REGISTRY,
-    AmberToolsToolkitWrapper,
+    NAGLToolkitWrapper,
     RDKitToolkitWrapper,
 )
 
@@ -21,11 +21,11 @@ print("found version {found_version}")
 print(f"{GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions=}")
 
 assert RDKitToolkitWrapper().is_available()
-assert AmberToolsToolkitWrapper().is_available()
+assert NAGLToolkitWrapper().is_available()
 
 offmol = Molecule.from_smiles('CCO')
 Molecule.from_rdkit(offmol.to_rdkit())
-ff = ForceField('openff-1.0.0.offxml')
+ff = ForceField('openff-2.3.0.offxml')
 ff.create_openmm_system(offmol.to_topology())
 
 client = PortalClient("https://api.qcarchive.molssi.org:443/")

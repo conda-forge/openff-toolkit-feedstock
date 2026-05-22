@@ -28,7 +28,9 @@ def main():
 
     # Check that the (filtered) file trees match, and are not empty
     assert repo_tree, "Source repository tree is empty"
-    assert repo_tree == installed_tree, "Source repo tree doesn't match installed tree"
+    assert repo_tree == installed_tree, (
+        f"Source repo tree doesn't match installed tree, {repo_tree=} and {installed_tree=}"
+    )
 
     # Run the examples helper and check what files it copies over
     helper_test_path = Path("helper_test_target")
