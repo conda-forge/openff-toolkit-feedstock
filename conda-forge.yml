@@ -4,6 +4,3 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
-workflow_settings:
-  store_build_artifacts:
-    - value: true
