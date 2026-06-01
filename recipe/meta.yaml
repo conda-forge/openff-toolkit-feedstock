@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 4
+  number: 5
 
 outputs:
   - name: openff-toolkit-base
@@ -63,10 +63,7 @@ outputs:
         - openmm >=7.6
         - openff-interchange >=0.4,<0.6
         - rdkit !=2024.03.6
-        - mdtraj
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }} 
-        - notebook
-        - ipywidgets
         - openff-nagl >=0.4
       run_constrained:
         - ambertools >=22
@@ -93,8 +90,10 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }},<3.13
-        - nglview
+        - notebook  # should we just tell users to use jupyterlab?
         - jupyterlab
+        - nglview
+        - mdtraj
         - qcelemental
         - qcportal >=0.50.0
         - qcengine
