@@ -90,7 +90,6 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }},<3.13
-        - notebook  # should we just tell users to use jupyterlab?
         - jupyterlab
         - nglview
         - mdtraj
