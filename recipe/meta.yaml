@@ -63,7 +63,7 @@ outputs:
         - openmm >=7.6
         - openff-interchange >=0.4,<0.6
         - rdkit !=2024.03.6
-        - {{ pin_subpackage('openff-toolkit-base', exact=True) }} 
+        - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - openff-nagl >=0.4
       run_constrained:
         - ambertools >=22
