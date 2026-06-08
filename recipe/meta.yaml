@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 5
+  number: 6
 
 outputs:
   - name: openff-toolkit-base
@@ -27,7 +27,7 @@ outputs:
         - setuptools
         - versioningit
       run:
-        - python >={{ python_min }},<3.14a0
+        - python >={{ python_min }}
         - packaging
         - numpy
         - openff-forcefields
@@ -59,11 +59,11 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.14a0
+        - python >={{ python_min }}
         - openmm >=7.6
         - openff-interchange >=0.4,<0.6
         - rdkit !=2024.03.6
-        - {{ pin_subpackage('openff-toolkit-base', exact=True) }} 
+        - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - openff-nagl >=0.4
       run_constrained:
         - ambertools >=22
