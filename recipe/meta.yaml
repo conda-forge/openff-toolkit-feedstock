@@ -64,7 +64,7 @@ outputs:
         - openff-interchange >=0.4,<0.6
         - rdkit !=2024.03.6
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
-        - openff-nagl >=0.4
+        - openff-nagl >=0.5.2
       run_constrained:
         - ambertools >=22
 
