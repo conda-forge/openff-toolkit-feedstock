@@ -1,6 +1,6 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.18.0" %}
-{% set python_min = '3.11' %}
+{% set version = "0.18.1" %}
+{% set python_min = '3.12' %}
 
 package:
   name: openff-toolkit-split
@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 6
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
