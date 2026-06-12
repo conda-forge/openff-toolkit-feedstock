@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -32,7 +32,7 @@ outputs:
         - numpy
         - openff-forcefields
         - openff-amber-ff-ports >=2025.09.0
-        - openff-units
+        - openff-units >=0.2
         - openff-utilities
         - networkx >=2.5
         - xmltodict <1.0.3
@@ -60,11 +60,11 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - openmm >=7.6
-        - openff-interchange >=0.4,<0.6
+        - openmm >=8
+        - openff-interchange >=0.5
         - rdkit !=2024.03.6
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
-        - openff-nagl >=0.4
+        - openff-nagl >=0.5.2
       run_constrained:
         - ambertools >=22
 
