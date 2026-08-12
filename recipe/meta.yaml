@@ -1,5 +1,5 @@
 {% set name = "openff-toolkit" %}
-{% set version = "0.18.1" %}
+{% set version = "0.19.0" %}
 {% set python_min = '3.12' %}
 
 package:
@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 3
+  number: 0
 
 outputs:
   - name: openff-toolkit-base
@@ -38,7 +38,7 @@ outputs:
         - openff-utilities
         - rdkit !=2024.03.6
         - networkx >=2.5
-        - xmltodict <1.0.3
+        - xmltodict
         - bson
         - python-constraint
         - cachetools
