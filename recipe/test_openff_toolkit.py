@@ -16,7 +16,7 @@ from qcportal import PortalClient
 found_version = Version(__version__)
 assert not (found_version.minor == 0 and found_version.major == 0), found_version
 
-print("found version {found_version}")
+print(f"found version {found_version}")
 
 print(f"{GLOBAL_TOOLKIT_REGISTRY.registered_toolkit_versions=}")
 
