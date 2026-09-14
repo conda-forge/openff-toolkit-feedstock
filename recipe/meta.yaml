@@ -12,7 +12,7 @@ source:
   git_depth: -1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openff-toolkit-base
@@ -65,6 +65,7 @@ outputs:
         - openff-interchange >=0.5
         - {{ pin_subpackage('openff-toolkit-base', exact=True) }}
         - openff-nagl >=0.5.2
+        - openff-nagl-models >=2025
       run_constrained:
         - ambertools >=22
 
